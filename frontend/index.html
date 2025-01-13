@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="lib/css/index.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>The showcase website</h1>
+  <form id="emailForm" method="POST" target="<%= BACKEND_URL %>">
+    <label>You message:</label>
+    <textarea name="message" placeholder="Message..." style="display: block;">
+      Hello, having a nice day?
+      <script>alert('yo');</script>
+    </textarea>
+
+    <!--<input name="message" value="Hello, having a nice day?<script>alert('yo');</script>" />-->
+    <button type="submit">Send</button>
+  </form>
+
+  <p>Paragraph 1.</p>
+  <p>Paragraph 2.</p>
+  <pre></pre>
+
+  <script src="lib/js/index.js"></script>
+</body>
+
+</html>

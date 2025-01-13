@@ -1,0 +1,20 @@
+:root {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#emailForm textarea {
+  font-size: inherit;
+  border-radius: 10px;
+  width: 20em;
+  height: 10em;
+  padding: 10px;
+}
+
+#emailForm button {
+  font-size: inherit;
+  background-color: lightgray;
+  border-radius: 1em;
+  padding: 1em 1.25em;
+  margin: 10px 0;
+}
