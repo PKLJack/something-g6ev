@@ -1,0 +1,10 @@
+services:
+  backend:
+    image: docker.io/library/php:8.4-apache-bookworm
+    volumes:
+      - type: bind
+        source: ./backend
+        target: /var/www/html
+        read_only: true
+    env_file: ".env.local"
+    restart: always

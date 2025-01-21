@@ -3,9 +3,12 @@
 
 
 // Headers
-$origin = 'http://localhost:3201'; // TODO: Read from env
+// $origin = 'http://localhost:3201'; // TODO: Read from env
+$origin = getenv('FRONTEND_ORIGIN');
 header("Access-Control-Allow-Origin: $origin");
 header("Access-Control-Allow-Headers: Content-Type");
+
+// var_dump($_SERVER);
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -26,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     echo json_encode([
             'language' => 'php',
-            'data' => $body
+        'data' => $body,
+        'HTTP_ORIGIN' => $_SERVER['HTTP_ORIGIN'],
     ], flags: JSON_THROW_ON_ERROR);
 
 } elseif ($_SERVER['REQUEST_METHOD'] === 'GET') {

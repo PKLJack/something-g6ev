@@ -3,12 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
-    "build": "ejs -f env.local.json -o dist/index.html",
-    "gh-dploy": "gh-pages -d frontend",
+    "gh-deploy": "gh-pages -d dist",
     "dev": "npx http-server -a 127.0.0.1 -p 3201",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

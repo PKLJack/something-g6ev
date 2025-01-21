@@ -10,10 +10,10 @@
 
 <body>
   <h1>The showcase website</h1>
-  <form id="emailForm" method="POST" target="<%= BACKEND_URL %>">
+  <form id="emailForm" method="POST" target="<%= BACKEND_ORIGIN %>/index.php">
     <label>You message:</label>
     <textarea name="message" placeholder="Message..." style="display: block;">
-      Hello, having a nice day?
+      Hello, having a nice day??
       <script>alert('yo');</script>
     </textarea>
 
@@ -24,6 +24,13 @@
   <p>Paragraph 1.</p>
   <p>Paragraph 2.</p>
   <pre></pre>
+
+  <h1>Download</h1>
+  <ul>
+    <li>
+      <a href="<%= BACKEND_ORIGIN %>/random.pdf" target="_blank">Download PDF here</a>
+    </li>
+  </ul>
 
   <script src="lib/js/index.js"></script>
 </body>
