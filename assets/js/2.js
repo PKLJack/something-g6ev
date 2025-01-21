@@ -3,17 +3,21 @@ console.log("lib/js/index.js");
 const url = "http://localhost:8201/index.php";
 //const url = "http://localhost:8201/phpinfo.php";
 
-document
-  .querySelector("#emailForm")
-  .addEventListener("submit", async function (e) {
+document.querySelector("#emailForm").addEventListener(
+  "submit",
+  /** @param {SubmitEvent} e  */ async function (e) {
     e.preventDefault();
 
+    /** @type {HTMLFormElement} */
+    const formEl = e.currentTarget;
     console.log("The form");
-    console.log(this);
+    console.log(formEl);
 
     console.log("Sending to PHP backend");
-    const formData = new FormData(this);
+    const formData = new FormData(formEl);
     const body = Object.fromEntries(formData.entries());
+
+    const url = formEl.target;
 
     console.log("POST to", url, body);
     const res = await fetch(url, {
@@ -29,7 +33,8 @@ document
     console.table(resObj);
 
     document.querySelector("pre").append(JSON.stringify(resObj, null, 2));
-  });
+  },
+);
 
 setTimeout(() => {
   const el = document.querySelector("#emailForm button[type=submit]");
