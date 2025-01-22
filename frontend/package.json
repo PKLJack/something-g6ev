@@ -13,6 +13,7 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/ejs": "^3.1.5",
     "ejs": "^3.1.10",
     "gh-pages": "^6.3.0"
   }
